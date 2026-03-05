@@ -1,0 +1,20 @@
+{
+  "name": "stable-api-examples",
+  "private": true,
+  "license": "MIT",
+  "type": "module",
+  "scripts": {
+    "example:dashboard": "bun run examples/mail-dashboard.ts",
+    "example:digest": "bun run examples/ai-mail-summary.ts",
+    "example:extract": "bun run examples/data-extraction.ts",
+    "check": "biome check .",
+    "format": "biome format --write ."
+  },
+  "devDependencies": {
+    "@biomejs/biome": "latest",
+    "@types/bun": "latest"
+  },
+  "optionalDependencies": {
+    "openai": "^4"
+  }
+}
