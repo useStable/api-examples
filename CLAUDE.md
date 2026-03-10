@@ -11,9 +11,10 @@ Customers reference this to learn the API. Keep code simple and well-documented.
 bun run check              # lint (biome)
 bun run format             # auto-format (biome)
 bunx tsc --noEmit          # type check
-bun run example:dashboard  # mail dashboard
-bun run example:digest     # AI mail digest (requires openai)
-bun run example:extract    # data extraction results
+bun run example:dashboard        # mail dashboard
+bun run example:digest           # AI mail digest (requires openai)
+bun run example:extract          # data extraction results
+bun run example:download-scans   # download scanned mail PDFs
 ```
 
 ## Architecture
@@ -29,3 +30,5 @@ bun run example:extract    # data extraction results
 - TSDoc on all public interfaces and methods in `src/`
 - Examples support `STABLE_BASE_URL` env var for local/staging testing
 - All list endpoints return Relay-style cursor connections (`first`/`after`/`last`/`before`)
+- `verbatimModuleSyntax` is on — use `import type { Foo }` or `import { type Foo }` for type-only imports
+- Biome formats with 2-space indent (not tabs) — run `bun run format` before committing

@@ -6,6 +6,7 @@
   "scripts": {
     "example:dashboard": "bun run examples/mail-dashboard.ts",
     "example:digest": "bun run examples/ai-mail-summary.ts",
+    "example:download-scans": "bun run examples/download-scans.ts",
     "example:extract": "bun run examples/data-extraction.ts",
     "check": "biome check .",
     "format": "biome format --write ."

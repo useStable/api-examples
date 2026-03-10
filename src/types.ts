@@ -95,12 +95,15 @@ export type LocationCode =
 /** A physical mailing address. */
 export interface Address {
   line1: string;
-  line2: string;
+  /** Optional second line (suite, unit, etc.). */
+  line2?: string;
   city: string;
   /** Two-letter US state code (e.g. `"CA"`, `"NY"`). */
   state: string;
   /** Five-digit ZIP code. */
   postalCode: string;
+  /** ISO 3166-1 alpha-2 country code (e.g. `"US"`). */
+  country: string;
 }
 
 /** Progress through the USPS Form 1583 onboarding flow. */
