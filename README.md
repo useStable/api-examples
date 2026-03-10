@@ -83,6 +83,25 @@ bun run example:extract
 
 </details>
 
+---
+
+### Download Scanned Mail
+
+> So you want to download all the PDFs from the last week.
+
+Paginates through mail items with completed scans from the past 7 days and downloads each scan to a local `scans/` directory. Scan URLs are presigned S3 links (~24h expiry), so files are downloaded in one pass.
+
+```bash
+bun run example:download-scans
+```
+
+<details>
+<summary>Source</summary>
+
+[`examples/download-scans.ts`](examples/download-scans.ts)
+
+</details>
+
 ## Client Usage
 
 ```ts
