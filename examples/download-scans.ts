@@ -2,7 +2,7 @@
  * Example: Download Scanned Mail
  *
  * Downloads scanned content for all mail received in the last 7 days.
- * Scan URLs are temporary (presigned S3 URLs, ~24h expiry), so this script
+ * Scan URLs are temporary (presigned URLs), so this script
  * fetches mail items and downloads their scans in one pass.
  *
  * Files are saved to a local `scans/` directory as `{mailItemId}.{ext}`.
