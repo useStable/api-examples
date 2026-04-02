@@ -4,7 +4,7 @@
  * Derived from the Stable REST API OpenAPI specification.
  * https://docs.usestable.com
  *
- * @generated 2026-03-05
+ * @generated 2026-04-02
  */
 
 /** Cursor-based pagination metadata returned with every list endpoint. */
@@ -278,6 +278,14 @@ export interface ListMailItemsParams extends PaginationParams {
   "scan.createdAt_lte"?: string;
 }
 
+/** An image associated with a check (e.g. full-page scan, cropped check). */
+export interface CheckImage {
+  /** The type of image — `"front_full"` for the full page, `"front_cropped"` for just the check. */
+  type: "front_full" | "front_cropped";
+  /** A signed URL to the image. */
+  url: string;
+}
+
 /** Current status of a check deposit. */
 export type CheckStatus =
   | "notRequested"
@@ -333,6 +341,8 @@ export interface Check {
   statusTransitions: CheckStatusTransitions;
   /** Present when `status` is `"failed"` — explains what went wrong. */
   failureDetails?: CheckFailureDetails;
+  /** Images associated with this check (e.g. full-page scan, cropped check). */
+  images: CheckImage[];
 }
 
 /** A tag that can be assigned to mail items for organization. */

@@ -15,6 +15,7 @@ bun run example:dashboard        # mail dashboard
 bun run example:digest           # AI mail digest (requires openai)
 bun run example:extract          # data extraction results
 bun run example:download-scans   # download scanned mail PDFs
+bun run example:download-check-images  # download check images
 ```
 
 ## Architecture

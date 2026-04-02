@@ -89,7 +89,7 @@ bun run example:extract
 
 > So you want to download all the PDFs from the last week.
 
-Paginates through mail items with completed scans from the past 7 days and downloads each scan to a local `scans/` directory. Scan URLs are presigned S3 links (~24h expiry), so files are downloaded in one pass.
+Paginates through mail items with completed scans from the past 7 days and downloads each scan to a local `scans/` directory. Scan URLs are presigned links, so files are downloaded in one pass.
 
 ```bash
 bun run example:download-scans
@@ -99,6 +99,25 @@ bun run example:download-scans
 <summary>Source</summary>
 
 [`examples/download-scans.ts`](examples/download-scans.ts)
+
+</details>
+
+---
+
+### Download Check Images
+
+> So you want to download all your check images from the last week.
+
+Paginates through mail items from the past 7 days, finds any checks with images, and downloads each image to a local `check-images/` directory. Image URLs are presigned links, so files are downloaded in one pass.
+
+```bash
+bun run example:download-check-images
+```
+
+<details>
+<summary>Source</summary>
+
+[`examples/download-check-images.ts`](examples/download-check-images.ts)
 
 </details>
 
